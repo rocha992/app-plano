@@ -1,142 +1,135 @@
-/* styles.css */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100&display=swap');
 
 body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-  }
-  
-  .container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
-    margin-top: 20px;
-  }
-  
-  h1, h2, h3 {
-    color: #333;
-  }
-  
-  button {
-    background-color: #4caf50;
-    color: white;
-    padding: 10px 15px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-  }
-  
-  button:hover {
-    background-color: #45a049;
-  }
-  
-  /* Adicione um estilo ao botão de mostrar o diário */
-  #mostrarDiario {
-    background-color: #3498db;
-    color: white;
-    padding: 10px 15px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    margin-top: 10px;
-  }
-  
-  #mostrarDiario:hover {
-    background-color: #2980b9;
-  }
-  
-  /* Estilos específicos para o diário */
-  #anotacoesContainer {
-    margin-top: 20px;
-  }
-  
-  .anotacao {
-    margin-bottom: 20px;
-    padding: 10px;
-    background-color: #ecf0f1;
-    border-radius: 5px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-  }
-  
-  .anotacao p {
-    margin: 0;
-  }
-  
-  /* Estilo para a caixa de texto do diário */
-  #anotacaoDoDia {
-    width: 100%;
-    padding: 10px;
-    margin-top: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    box-sizing: border-box;
-  }
-  
-  /* Adiciona estilo ao botão de enviar do diário */
-  #enviarAnotacao {
-    background-color: #3498db;
-    color: white;
-    padding: 10px 15px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    margin-top: 10px;
-  }
-  
-  #enviarAnotacao:hover {
-    background-color: #2980b9;
-  }
+  margin: 0;
+  font-family: "Noto Sans", sans-serif;
+  background-image: url(../01.png);
+}
 
-  /* styles.css */
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-/* Estilo para a caixa de texto do diário */
+.left-container,
+.right-container {
+  width: 50vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.left-container>h1,
+.left-container>h2,
+.right-container>h1,
+.right-container>h2 {
+  color: #77ffc0;
+}
+
+.card-container-left,
+.card-container-right {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 30px 35px;
+  background-color: #2f2841;
+  border-radius: 20px;
+  box-shadow: 0px 10px 40px #00000056;
+}
+
+button {
+  width: 100%;
+  padding: 16px 0px;
+  margin: 25px;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 3px;
+  color: #2b134b;
+  background: #00ff88;
+  cursor: pointer;
+  box-shadow: 0px 10px 40px -12px #00ff8052;
+}
+
+#anotacoesContainer {
+  margin-top: 20px;
+}
+
+.anotacao {
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: #ecf0f1;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.anotacao p {
+  margin: 0;
+}
+
 #anotacaoDoDia {
-    width: calc(100% - 20px); /* Reduzindo a largura para acomodar os botões na mesma linha */
-    padding: 10px;
-    margin-top: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    box-sizing: border-box;
-    display: inline-block; /* Permite que os elementos fiquem na mesma linha */
-  }
-  
-  /* Adiciona estilo ao botão de enviar do diário */
-  #enviarAnotacao, #mostrarDiario {
-    background-color: #3498db;
-    color: white;
-    padding: 10px 15px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    margin-top: 10px;
-    display: inline-block; /* Permite que os elementos fiquem na mesma linha */
-  }
-  
-  #enviarAnotacao:hover, #mostrarDiario:hover {
-    background-color: #2980b9;
-  }
-  
-  /* styles.css */
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin-top: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  resize: vertical;
+           
+}
 
-#barraDeProgresso {
-    background-color: #f0f0f0;
-    height: 20px;
-    width: 100%;
-    margin-bottom: 20px;
-  }
+.container-diario {
+  width: 50vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+}
+
+.card-container {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 30px 35px;
+  background-color: #2f2841;
+  border-radius: 20px;
+  box-shadow: 0px 10px 40px #00000056;
+
+}
+
+h1, h2, title{
+  color: #00ff88; 
+}
+
+.container {
+  display: flex;
+}
+
+.editar, .apagar {
+  width: 30%;
+  padding: 8px 0px;
+  margin: 25px;
   
-  #barraDeProgresso p {
-    text-align: center;
-    margin: 0;
-    padding: 10px;
-    font-weight: bold;
-  }
-  
+}
+
+.voltarParaPaginaPrincipal{
+  width: 30%;
+  padding: 8px 0px;
+  margin: 25px;
+}

@@ -1,13 +1,9 @@
-function mostrarDiario() {
-    window.location.href = 'diario.html';
-  }
-  
   function calcularPorcentagemConclusao(planoLeitura) {
     const dataAtual = new Date();
     const diaDoAno = Math.ceil((dataAtual - new Date(dataAtual.getFullYear(), 0, 1)) / (24 * 60 * 60 * 1000));
     const diasFaltando = planoLeitura.length - (diaDoAno % planoLeitura.length);
     const porcentagemConclusao = ((diaDoAno - 1) / planoLeitura.length) * 100; // Subtrai 1 para considerar que o dia atual ainda não foi concluído
-    return { porcentagem: porcentagemConclusao.toFixed(2), diasFaltando: diasFaltando };
+    return { porcentagem: porcentagemConclusao, diasFaltando: diasFaltando };
   }
   
   // Verifica se o plano de leitura já está no armazenamento local
@@ -46,12 +42,27 @@ function mostrarDiario() {
       inicio += capitulosParaDia;
     }
   
-    localStorage.setItem('planoLeitura', JSON.stringify(planoDeLeitura));
+    try {
+      localStorage.setItem('planoLeitura', JSON.stringify(planoDeLeitura));
+      console.log('Plano de leitura gerado e armazenado com sucesso.');
+    } catch (error) {
+      console.error('Erro ao armazenar o plano de leitura no Local Storage:', error);
+    }
+  }
+  
+  //fun
+  function mostrarDiario() {
+    window.location.href = 'diario.html';
   }
   
   function carregarPlanoLeitura() {
     const planoLeitura = JSON.parse(localStorage.getItem('planoLeitura')) || [];
     const barraDeProgresso = document.getElementById('barraDeProgresso');
+  
+    if (!barraDeProgresso) {
+      console.error('Elemento barraDeProgresso não encontrado.');
+      return;
+    }
   
     if (planoLeitura.length === 0) {
       barraDeProgresso.innerHTML = '<p>Plano de leitura não disponível</p>';
@@ -60,8 +71,12 @@ function mostrarDiario() {
   
     const { porcentagem, diasFaltando } = calcularPorcentagemConclusao(planoLeitura);
   
-    barraDeProgresso.innerHTML = `<p>Conclusão: ${porcentagem}% (${diasFaltando} dias restantes)</p>`;
+    barraDeProgresso.innerHTML = `<p>Conclusão: ${porcentagem.toFixed(2)}% (${diasFaltando} dias restantes)</p>`;
   }
+  
+  // Chama a função para carregar o plano de leitura quando o script é executado
+  carregarPlanoLeitura();
+  
 
   
   function carregarAnotacoes() {
@@ -151,6 +166,5 @@ function mostrarDiario() {
   }
   
   // Carrega o plano de leitura, a barra de progresso e as anotações ao carregar a página
-  carregarPlanoLeitura();
   carregarAnotacoes();
   
