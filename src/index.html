@@ -1,0 +1,29 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Plano de Leitura da Bíblia</title>
+</head>
+<body>
+  <div class="container">
+    <h1>A biblia em 1 ano</h1>
+    <p id="capituloDoDia">Carregando...</p>
+    
+    <div>
+      <h2>O que aprendi hoje?</h2>
+      <textarea id="anotacaoDoDia" placeholder="Digite suas anotações aqui"></textarea>
+      <button onclick="salvarAnotacao()">Salvar Anotação</button>
+    </div>
+
+    <button id="mostrarDiario" onclick="mostrarDiario()">Mostrar Diário 📖</button>
+
+    <div id="barraDeProgresso"></div>
+    
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

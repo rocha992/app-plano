@@ -1,0 +1,142 @@
+/* styles.css */
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    margin-top: 20px;
+  }
+  
+  h1, h2, h3 {
+    color: #333;
+  }
+  
+  button {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  /* Adicione um estilo ao botão de mostrar o diário */
+  #mostrarDiario {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+  
+  #mostrarDiario:hover {
+    background-color: #2980b9;
+  }
+  
+  /* Estilos específicos para o diário */
+  #anotacoesContainer {
+    margin-top: 20px;
+  }
+  
+  .anotacao {
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #ecf0f1;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .anotacao p {
+    margin: 0;
+  }
+  
+  /* Estilo para a caixa de texto do diário */
+  #anotacaoDoDia {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  
+  /* Adiciona estilo ao botão de enviar do diário */
+  #enviarAnotacao {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+  
+  #enviarAnotacao:hover {
+    background-color: #2980b9;
+  }
+
+  /* styles.css */
+
+/* Estilo para a caixa de texto do diário */
+#anotacaoDoDia {
+    width: calc(100% - 20px); /* Reduzindo a largura para acomodar os botões na mesma linha */
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    display: inline-block; /* Permite que os elementos fiquem na mesma linha */
+  }
+  
+  /* Adiciona estilo ao botão de enviar do diário */
+  #enviarAnotacao, #mostrarDiario {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+    display: inline-block; /* Permite que os elementos fiquem na mesma linha */
+  }
+  
+  #enviarAnotacao:hover, #mostrarDiario:hover {
+    background-color: #2980b9;
+  }
+  
+  /* styles.css */
+
+#barraDeProgresso {
+    background-color: #f0f0f0;
+    height: 20px;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  #barraDeProgresso p {
+    text-align: center;
+    margin: 0;
+    padding: 10px;
+    font-weight: bold;
+  }
+  
