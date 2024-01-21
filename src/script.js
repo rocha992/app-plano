@@ -198,4 +198,4 @@ function loginComGoogle() {
       console.error("Erro de autenticação com Google:", error);
     });
 }
-}
+
