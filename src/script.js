@@ -168,3 +168,34 @@
   // Carrega o plano de leitura, a barra de progresso e as anotações ao carregar a página
   carregarAnotacoes();
   
+  // Importe o módulo de autenticação do Firebase
+  import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
+
+
+// Inicialize o Firebase
+const auth = getAuth();
+signInWithPopup(auth, new GoogleAuthProvider())
+  .then((result) => {
+    // Login com sucesso
+    const user = result.user;
+    console.log("Usuário autenticado:", user);
+  })
+  .catch((error) => {
+    // Trate erros de autenticação
+    console.error("Erro de autenticação:", error);
+  });
+
+
+function loginComGoogle() {
+  signInWithPopup(auth, new GoogleAuthProvider())
+    .then((result) => {
+      // Login com sucesso
+      const user = result.user;
+      console.log("Usuário autenticado com Google:", user);
+    })
+    .catch((error) => {
+      // Trate erros de autenticação
+      console.error("Erro de autenticação com Google:", error);
+    });
+}
+}

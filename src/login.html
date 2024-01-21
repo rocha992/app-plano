@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Login - Plano de Leitura da Bíblia</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="auth-container">
+      <h1>Login</h1>
+      <label for="email">Email:</label>
+      <input type="email" id="email" placeholder="Seu email">
+      <label for="senha">Senha:</label>
+      <input type="password" id="senha" placeholder="Sua senha">
+      <button onclick="login()">Entrar</button>
+      <button id="loginGoogle" onclick="loginComGoogle()">Login com Google</button>
+
+    </div>
+    
+  </div>
+  <script src="https://www.gstatic.com/firebasejs/9.4.1/firebase-auth.js"></script>
+  <script type="module" src="seu-arquivo.js"></script>
+</body>
+
+</html>
